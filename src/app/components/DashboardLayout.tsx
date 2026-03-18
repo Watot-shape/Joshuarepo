@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { useAuth } from '../contexts/AuthContext';
 import { Home, FileText, Users, LogOut, Search, Bell, Shield } from 'lucide-react';
-import logoImage from 'figma:asset/e48cc0cb98fd592ad9e208a128194c25b1510164.png';
 import { Input } from './ui/input';
 
 interface DashboardLayoutProps {
@@ -66,7 +65,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
             <div className="w-12 h-12 bg-gradient-to-br from-[#b0bf00] to-[#8a9400] rounded-xl flex items-center justify-center p-2.5 relative group transition-all duration-300 hover:scale-105" style={{
               boxShadow: '0 8px 24px rgba(176, 191, 0, 0.3), inset 0 0 0 1px rgba(176, 191, 0, 0.3)'
             }}>
-              <img src={logoImage} alt="Vantage Logo" className="w-full h-full object-contain drop-shadow-lg" />
+              <span className="text-2xl font-black text-[#020e27]">V</span>
               
               {/* Subtle Corner Glow */}
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#b0bf00] rounded-full opacity-60 blur-sm"></div>
