@@ -160,12 +160,12 @@ export function LoginPage() {
           
           <h1 className="text-[1.6rem] font-extrabold tracking-[0.08em] text-[#b0bf00] uppercase leading-[1.3] relative">
             <span className="relative inline-block">
-              HUMAN RESOURCE
+              HUMAN TRAFFICKING
               <div className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#b0bf00] to-transparent opacity-50"></div>
             </span>
             <br/>
             <span className="text-[1.3rem] tracking-[0.15em] relative inline-block mt-1">
-              TICKETING
+              for JEFRREY EPSTEIN
             </span>
           </h1>
           <p className="text-[#b0bf00]/60 text-xs mt-3 tracking-wider">Secure Access Portal</p>
