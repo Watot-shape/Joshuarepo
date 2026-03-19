@@ -78,7 +78,7 @@ export function LoginPage() {
     <div 
       className="min-h-screen flex items-center justify-center relative overflow-hidden font-sans"
       style={{ 
-        background: 'radial-gradient(ellipse at top, #0a1a35 0%, #020e27 50%, #000 100%)'
+        background: 'radial-gradient(ellipse at top, #0a1a35 0%, #111827 50%, #000 100%)'
       }}
     >
       {/* Animated Background patterns */}
@@ -160,12 +160,8 @@ export function LoginPage() {
           
           <h1 className="text-[1.6rem] font-extrabold tracking-[0.08em] text-[#b0bf00] uppercase leading-[1.3] relative">
             <span className="relative inline-block">
-              HUMAN TRAFFICKING
+              DMTS
               <div className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#b0bf00] to-transparent opacity-50"></div>
-            </span>
-            <br/>
-            <span className="text-[1.3rem] tracking-[0.15em] relative inline-block mt-1">
-              for JEFRREY EPSTEIN
             </span>
           </h1>
           <p className="text-[#b0bf00]/60 text-xs mt-3 tracking-wider">Secure Access Portal</p>
@@ -243,7 +239,7 @@ export function LoginPage() {
           <button 
             type="submit" 
             disabled={isLoading}
-            className="w-full h-13 bg-[#b0bf00] hover:bg-[#c5d420] text-[#020e27] border-none rounded-lg font-bold text-base cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(176,191,0,0.4)] disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+            className="w-full h-13 bg-[#b0bf00] hover:bg-[#c5d420] text-gray-950 border-none rounded-lg font-bold text-base cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(176,191,0,0.4)] disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
             style={{
               boxShadow: '0 4px 20px rgba(176, 191, 0, 0.3)'
             }}
@@ -251,13 +247,12 @@ export function LoginPage() {
             <span className="relative z-10 flex items-center justify-center gap-2">
               {isLoading ? (
                 <>
-                  <div className="w-4 h-4 border-2 border-[#020e27] border-t-transparent rounded-full animate-spin"></div>
+                  <div className="w-4 h-4 border-2 border-gray-950 border-t-transparent rounded-full animate-spin"></div>
                   Signing In...
                 </>
               ) : (
                 <>
                   Sign In
-                  <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                 </>
               )}
             </span>
@@ -265,7 +260,7 @@ export function LoginPage() {
           </button>
 
           <div className="pt-6 border-t border-[#b0bf00]/10 relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 bg-[#020e27]">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 bg-gray-950">
               <div className="w-2 h-2 bg-[#b0bf00]/30 rounded-full"></div>
             </div>
             
@@ -286,7 +281,7 @@ export function LoginPage() {
                   onClick={() => handleRoleSelect(role.value)}
                   className={`py-2.5 text-[10px] font-bold rounded-lg cursor-pointer transition-all duration-300 relative overflow-hidden group ${
                     selectedRole === role.value
-                      ? "text-[#020e27]"
+                      ? "text-white"
                       : "text-[#b0bf00]/70 hover:text-[#b0bf00]"
                   }`}
                   style={{
@@ -315,7 +310,7 @@ export function LoginPage() {
               onClick={() => handleRoleSelect('super_admin')}
               className={`w-full mt-2 py-2.5 text-[10px] font-bold rounded-lg cursor-pointer transition-all duration-300 relative overflow-hidden group ${
                 selectedRole === 'super_admin'
-                  ? "text-[#020e27]"
+                  ? "text-white"
                   : "text-[#b0bf00]/70 hover:text-[#b0bf00]"
               }`}
               style={{

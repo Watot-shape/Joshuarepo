@@ -61,7 +61,7 @@ export function TicketsManagement() {
               <h2 className="text-2xl font-bold text-white mb-1">Ticket Management</h2>
               <p className="text-sm text-gray-400">Track and manage all your HR tickets</p>
             </div>
-            <Button className="bg-gradient-to-r from-[#b0bf00] to-[#9aaa00] hover:from-[#9aaa00] hover:to-[#7a8a00] text-[#020e27] font-semibold transition-all duration-300 hover:scale-105" style={{
+            <Button className="bg-gradient-to-r from-[#b0bf00] to-[#9aaa00] hover:from-[#9aaa00] hover:to-[#7a8a00] text-white font-semibold transition-all duration-300 hover:scale-105" style={{
               boxShadow: '0 4px 16px rgba(176, 191, 0, 0.3)'
             }}>
               <Plus className="w-4 h-4 mr-2" />
@@ -78,13 +78,13 @@ export function TicketsManagement() {
                 placeholder="Search tickets..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-11 bg-[#020e27]/50 border-[#b0bf00]/20 text-white placeholder:text-gray-500 focus:border-[#b0bf00] focus:ring-[#b0bf00]/30 rounded-xl"
+                className="pl-12 h-11 bg-gray-900/50 border-[#b0bf00]/20 text-white placeholder:text-gray-500 focus:border-[#b0bf00] focus:ring-[#b0bf00]/30 rounded-xl"
               />
             </div>
 
             {/* Category Filter */}
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-              <SelectTrigger className="w-[180px] h-11 bg-[#020e27]/50 border-[#b0bf00]/20 text-white rounded-xl">
+              <SelectTrigger className="w-[180px] h-11 bg-gray-900/50 border-[#b0bf00]/20 text-white rounded-xl">
                 <SelectValue placeholder="All Categories" />
               </SelectTrigger>
               <SelectContent>
@@ -98,7 +98,7 @@ export function TicketsManagement() {
 
             {/* Status Filter */}
             <Select value={statusFilter} onValueChange={setStatusFilter}>
-              <SelectTrigger className="w-[180px] h-11 bg-[#020e27]/50 border-[#b0bf00]/20 text-white rounded-xl">
+              <SelectTrigger className="w-[180px] h-11 bg-gray-900/50 border-[#b0bf00]/20 text-white rounded-xl">
                 <SelectValue placeholder="All Statuses" />
               </SelectTrigger>
               <SelectContent>
@@ -111,7 +111,7 @@ export function TicketsManagement() {
             </Select>
 
             {/* Filters Button */}
-            <Button variant="outline" className="h-11 border-[#b0bf00]/20 bg-[#020e27]/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40 rounded-xl">
+            <Button variant="outline" className="h-11 border-[#b0bf00]/20 bg-gray-900/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40 rounded-xl">
               <Filter className="w-4 h-4 mr-2" />
               Filters
             </Button>
@@ -239,10 +239,10 @@ export function TicketsManagement() {
                 Showing <span className="text-white font-semibold">{filteredTickets.length}</span> of <span className="text-white font-semibold">{tickets.length}</span> tickets
               </p>
               <div className="flex gap-2">
-                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-[#020e27]/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40">
+                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-gray-900/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40">
                   Previous
                 </Button>
-                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-[#020e27]/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40">
+                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-gray-900/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40">
                   Next
                 </Button>
               </div>

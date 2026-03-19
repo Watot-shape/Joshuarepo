@@ -55,22 +55,22 @@ export function DashboardOverview() {
           <div className="relative z-10">
             <div className="flex items-start justify-between mb-6">
               <div>
-                <h2 className="text-3xl font-bold text-[#020e27] mb-2">
+                <h2 className="text-3xl font-bold text-white mb-2">
                   Welcome back, {user?.name.split(' ')[0]}!
                 </h2>
-                <p className="text-[#020e27]/80 text-lg">
+                <p className="text-gray-300 text-lg">
                   You have <span className="font-bold">{pendingTickets}</span> pending ticket{pendingTickets !== 1 ? 's' : ''} waiting for your attention.
                 </p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#020e27]/20 backdrop-blur-sm">
-                <TrendingUp className="w-5 h-5 text-[#020e27]" />
-                <span className="text-sm font-semibold text-[#020e27]">+12% this week</span>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm">
+                <TrendingUp className="w-5 h-5 text-white" />
+                <span className="text-sm font-semibold text-white">+12% this week</span>
               </div>
             </div>
             <Button 
-              className="bg-[#020e27] hover:bg-[#020e27]/90 text-[#b0bf00] font-semibold px-6 py-3 h-auto transition-all duration-300 hover:scale-105"
+              className="bg-white hover:bg-gray-100 text-gray-950 font-semibold px-6 py-3 h-auto transition-all duration-300 hover:scale-105"
               style={{
-                boxShadow: '0 4px 16px rgba(2, 14, 39, 0.4)'
+                boxShadow: '0 4px 16px rgba(255, 255, 255, 0.2)'
               }}
               onClick={() => navigate('/tickets')}
             >

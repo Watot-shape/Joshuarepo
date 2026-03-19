@@ -251,7 +251,7 @@ export function AdminDashboard() {
             <div>
               <label className="text-xs text-gray-400 mb-2 block">Category</label>
               <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-                <SelectTrigger className="bg-[#020e27]/50 border-[#b0bf00]/20 text-white">
+                <SelectTrigger className="bg-gray-900/50 border-[#b0bf00]/20 text-white">
                   <SelectValue placeholder="All Categories" />
                 </SelectTrigger>
                 <SelectContent>
@@ -268,7 +268,7 @@ export function AdminDashboard() {
             <div>
               <label className="text-xs text-gray-400 mb-2 block">Status</label>
               <Select value={statusFilter} onValueChange={setStatusFilter}>
-                <SelectTrigger className="bg-[#020e27]/50 border-[#b0bf00]/20 text-white">
+                <SelectTrigger className="bg-gray-900/50 border-[#b0bf00]/20 text-white">
                   <SelectValue placeholder="All Statuses" />
                 </SelectTrigger>
                 <SelectContent>
@@ -284,7 +284,7 @@ export function AdminDashboard() {
             <div>
               <label className="text-xs text-gray-400 mb-2 block">Priority</label>
               <Select value={priorityFilter} onValueChange={setPriorityFilter}>
-                <SelectTrigger className="bg-[#020e27]/50 border-[#b0bf00]/20 text-white">
+                <SelectTrigger className="bg-gray-900/50 border-[#b0bf00]/20 text-white">
                   <SelectValue placeholder="All Priorities" />
                 </SelectTrigger>
                 <SelectContent>
@@ -389,10 +389,10 @@ export function AdminDashboard() {
                 Showing <span className="text-white font-semibold">{filteredTickets.length}</span> of <span className="text-white font-semibold">{tickets.length}</span> tickets
               </p>
               <div className="flex gap-2">
-                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-[#020e27]/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white">
+                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-gray-900/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white">
                   Previous
                 </Button>
-                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-[#020e27]/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white">
+                <Button variant="outline" size="sm" className="border-[#b0bf00]/20 bg-gray-900/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white">
                   Next
                 </Button>
               </div>

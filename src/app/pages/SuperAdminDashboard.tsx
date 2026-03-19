@@ -68,10 +68,10 @@ export function SuperAdminDashboard() {
         }}>
           <div className="absolute top-0 right-0 w-40 h-40 bg-[#b0bf00] rounded-full blur-3xl opacity-10"></div>
           <div className="flex items-center gap-4 relative z-10">
-            <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#b0bf00] to-[#8a9400]" style={{
+            <div className="w-16 h-16 bg-gradient-to-br from-[#b0bf00] to-[#8a9400] rounded-2xl flex items-center justify-center relative" style={{
               boxShadow: '0 8px 24px rgba(176, 191, 0, 0.4)'
             }}>
-              <Shield className="w-8 h-8 text-[#020e27]" />
+              <Shield className="w-8 h-8 text-white" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-white mb-1">Super Admin Control Center</h1>
@@ -189,7 +189,7 @@ export function SuperAdminDashboard() {
                 onClick={() => setSelectedTab(tab.id as any)}
                 className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                   selectedTab === tab.id
-                    ? 'text-[#020e27]'
+                    ? 'text-white'
                     : 'text-gray-400 hover:text-white'
                 }`}
                 style={{
@@ -227,7 +227,7 @@ export function SuperAdminDashboard() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 rounded-xl bg-[#020e27]/50">
+                <div className="p-4 rounded-xl bg-gray-900/50">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-sm text-gray-400">Database Status</p>
                     <CheckCircle className="w-5 h-5 text-green-400" />
@@ -236,7 +236,7 @@ export function SuperAdminDashboard() {
                   <p className="text-xs text-green-400 mt-1">All connections active</p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#020e27]/50">
+                <div className="p-4 rounded-xl bg-gray-900/50">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-sm text-gray-400">API Performance</p>
                     <TrendingUp className="w-5 h-5 text-green-400" />
@@ -245,7 +245,7 @@ export function SuperAdminDashboard() {
                   <p className="text-xs text-green-400 mt-1">Avg response: 45ms</p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#020e27]/50">
+                <div className="p-4 rounded-xl bg-gray-900/50">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-sm text-gray-400">Storage Usage</p>
                     <AlertTriangle className="w-5 h-5 text-yellow-400" />
@@ -266,7 +266,7 @@ export function SuperAdminDashboard() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <Button
                   onClick={() => navigate('/authority-management')}
-                  className="h-auto py-4 bg-gradient-to-r from-[#b0bf00] to-[#8a9400] hover:from-[#9aaa00] hover:to-[#7a8400] text-[#020e27] font-semibold justify-start"
+                  className="h-auto py-4 bg-gradient-to-r from-[#b0bf00] to-[#8a9400] hover:from-[#9aaa00] hover:to-[#7a8400] text-white font-semibold justify-start"
                   style={{ boxShadow: '0 4px 16px rgba(176, 191, 0, 0.3)' }}
                 >
                   <Award className="w-5 h-5 mr-3" />
@@ -279,7 +279,7 @@ export function SuperAdminDashboard() {
                 <Button
                   onClick={() => setSelectedTab('users')}
                   variant="outline"
-                  className="h-auto py-4 border-[#b0bf00]/30 bg-[#020e27]/50 text-white hover:bg-[#b0bf00]/10 justify-start"
+                  className="h-auto py-4 border-[#b0bf00]/30 bg-gray-900/50 text-white hover:bg-[#b0bf00]/10 justify-start"
                 >
                   <UserPlus className="w-5 h-5 mr-3 text-[#b0bf00]" />
                   <div className="text-left">
@@ -291,7 +291,7 @@ export function SuperAdminDashboard() {
                 <Button
                   onClick={() => navigate('/dashboard/admin')}
                   variant="outline"
-                  className="h-auto py-4 border-[#b0bf00]/30 bg-[#020e27]/50 text-white hover:bg-[#b0bf00]/10 justify-start"
+                  className="h-auto py-4 border-[#b0bf00]/30 bg-gray-900/50 text-white hover:bg-[#b0bf00]/10 justify-start"
                 >
                   <FileText className="w-5 h-5 mr-3 text-[#b0bf00]" />
                   <div className="text-left">
@@ -302,7 +302,7 @@ export function SuperAdminDashboard() {
 
                 <Button
                   variant="outline"
-                  className="h-auto py-4 border-[#b0bf00]/30 bg-[#020e27]/50 text-white hover:bg-[#b0bf00]/10 justify-start"
+                  className="h-auto py-4 border-[#b0bf00]/30 bg-gray-900/50 text-white hover:bg-[#b0bf00]/10 justify-start"
                 >
                   <Settings className="w-5 h-5 mr-3 text-[#b0bf00]" />
                   <div className="text-left">
@@ -325,7 +325,7 @@ export function SuperAdminDashboard() {
               background: 'linear-gradient(to bottom, rgba(176, 191, 0, 0.05), transparent)'
             }}>
               <h3 className="text-lg font-bold text-white">System Users</h3>
-              <Button className="bg-[#b0bf00] hover:bg-[#9aaa00] text-[#020e27] font-semibold">
+              <Button className="bg-[#b0bf00] hover:bg-[#9aaa00] text-white font-semibold">
                 <UserPlus className="w-4 h-4 mr-2" />
                 Add New User
               </Button>
@@ -421,7 +421,7 @@ export function SuperAdminDashboard() {
                 { role: 'Admin', permissions: ['View all tickets', 'Manage all tickets', 'View analytics', 'System oversight'] },
                 { role: 'Super Admin', permissions: ['Full system access', 'User management', 'Grant permissions', 'System configuration'] },
               ].map((item) => (
-                <div key={item.role} className="p-5 rounded-xl bg-[#020e27]/50 border border-[#b0bf00]/10">
+                <div key={item.role} className="p-5 rounded-xl bg-gray-900/50 border border-[#b0bf00]/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-lg font-bold text-white">{item.role}</h4>
                     <Button variant="ghost" size="sm" className="text-[#b0bf00] hover:bg-[#b0bf00]/10">

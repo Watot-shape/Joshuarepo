@@ -35,7 +35,7 @@ export function EditUserModal({ user, onSave, onCancel }: EditUserModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex" style={{ background: 'linear-gradient(135deg, #020e27 0%, #0a1a35 50%, #020e27 100%)' }}>
+    <div className="fixed inset-0 z-50 flex" style={{ background: 'linear-gradient(135deg, #111827 0%, #0a1a35 50%, #111827 100%)' }}>
       {/* Enhanced Sidebar */}
       <aside className="w-72 text-white flex flex-col relative border-r border-[#b0bf00]/20" style={{
         background: 'linear-gradient(180deg, rgba(2, 14, 39, 0.95) 0%, rgba(10, 26, 53, 0.95) 100%)',
@@ -331,7 +331,7 @@ export function EditUserModal({ user, onSave, onCancel }: EditUserModalProps) {
                     </Button>
                     <Button
                       type="submit"
-                      className="bg-gradient-to-r from-[#b0bf00] to-[#9aaa00] hover:from-[#c5d420] hover:to-[#b0bf00] text-[#020e27] font-bold px-8 h-12 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(176,191,0,0.4)] hover:-translate-y-0.5 relative overflow-hidden group/btn"
+                      className="bg-gradient-to-r from-[#b0bf00] to-[#9aaa00] hover:from-[#c5d420] hover:to-[#b0bf00] text-white font-bold px-8 h-12 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(176,191,0,0.4)] hover:-translate-y-0.5 relative overflow-hidden group/btn"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-700"></div>
                       <Save className="w-4 h-4 mr-2 relative z-10" />

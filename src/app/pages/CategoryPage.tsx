@@ -110,7 +110,7 @@ export function CategoryPage() {
           <Button
             onClick={() => navigate('/dashboard/overview')}
             variant="outline"
-            className="border-[#b0bf00]/20 bg-[#020e27]/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40"
+            className="border-[#b0bf00]/20 bg-gray-900/50 text-gray-300 hover:bg-[#b0bf00]/10 hover:text-white hover:border-[#b0bf00]/40"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Overview
@@ -236,23 +236,23 @@ export function CategoryPage() {
                     
                     {/* Ticket Info */}
                     <div className="space-y-3 mb-6">
-                      <div className="p-3 rounded-lg bg-[#020e27]/50">
+                      <div className="p-3 rounded-lg bg-gray-900/50">
                         <p className="text-xs text-gray-500 mb-1">Ticket ID</p>
                         <p className="font-mono font-bold text-white">{selectedTicketData.id}</p>
                       </div>
-                      <div className="p-3 rounded-lg bg-[#020e27]/50">
+                      <div className="p-3 rounded-lg bg-gray-900/50">
                         <p className="text-xs text-gray-500 mb-1">Employee Name</p>
                         <p className="text-white">{selectedTicketData.createdByName}</p>
                       </div>
-                      <div className="p-3 rounded-lg bg-[#020e27]/50">
+                      <div className="p-3 rounded-lg bg-gray-900/50">
                         <p className="text-xs text-gray-500 mb-1">Title</p>
                         <p className="text-white font-semibold">{selectedTicketData.title}</p>
                       </div>
-                      <div className="p-3 rounded-lg bg-[#020e27]/50">
+                      <div className="p-3 rounded-lg bg-gray-900/50">
                         <p className="text-xs text-gray-500 mb-1">Description</p>
                         <p className="text-gray-300 text-sm">{selectedTicketData.description}</p>
                       </div>
-                      <div className="p-3 rounded-lg bg-[#020e27]/50">
+                      <div className="p-3 rounded-lg bg-gray-900/50">
                         <p className="text-xs text-gray-500 mb-1">Status</p>
                         <Badge className={`${getStatusColor(selectedTicketData.status)} border font-semibold`}>
                           {selectedTicketData.status.replace('_', ' ')}

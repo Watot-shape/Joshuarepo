@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router';
 import { useAuth } from '../contexts/AuthContext';
 import { Home, FileText, Users, LogOut, Search, Bell, Shield } from 'lucide-react';
 import { Input } from './ui/input';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -37,7 +38,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
   const isActivePath = (path: string) => location.pathname === path;
 
   return (
-    <div className="flex h-screen bg-[#020e27] overflow-hidden">
+    <div className="flex h-screen bg-gray-950 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-[#b0bf00] rounded-full blur-[150px] opacity-10"></div>
@@ -65,7 +66,11 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
             <div className="w-12 h-12 bg-gradient-to-br from-[#b0bf00] to-[#8a9400] rounded-xl flex items-center justify-center p-2.5 relative group transition-all duration-300 hover:scale-105" style={{
               boxShadow: '0 8px 24px rgba(176, 191, 0, 0.3), inset 0 0 0 1px rgba(176, 191, 0, 0.3)'
             }}>
-              <span className="text-2xl font-black text-[#020e27]">V</span>
+              <ImageWithFallback 
+                src="https://digitalmindsbpo.com/storage/2018/11/cropped-dm-favicon.png" 
+                alt="Vantage Logo" 
+                className="w-full h-full object-contain drop-shadow-lg" 
+              />
               
               {/* Subtle Corner Glow */}
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#b0bf00] rounded-full opacity-60 blur-sm"></div>
@@ -90,7 +95,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
                   onClick={() => navigate(item.path)}
                   className={`w-full flex items-center gap-4 px-5 py-3.5 rounded-xl transition-all duration-300 text-sm font-medium relative overflow-hidden group ${
                     isActive
-                      ? 'text-[#020e27]'
+                      ? 'text-white'
                       : 'text-gray-300 hover:text-white'
                   }`}
                   style={isActive ? {
@@ -105,7 +110,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
                   
                   {/* Active Indicator Line */}
                   {isActive && (
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#020e27] rounded-r-full"></div>
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-white rounded-r-full"></div>
                   )}
                   
                   <Icon className={`w-5 h-5 relative z-10 ${isActive ? 'drop-shadow-sm' : ''}`} />
@@ -132,7 +137,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
             <div className="w-10 h-10 bg-gradient-to-br from-[#b0bf00] to-[#8a9400] rounded-lg flex items-center justify-center relative" style={{
               boxShadow: '0 4px 12px rgba(176, 191, 0, 0.3)'
             }}>
-              <span className="text-sm font-bold text-[#020e27]">
+              <span className="text-sm font-bold text-white">
                 {user?.name.charAt(0).toUpperCase()}
               </span>
             </div>
@@ -187,7 +192,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
                 border: '1px solid rgba(176, 191, 0, 0.2)'
               }}>
                 <Bell className="w-5 h-5 text-[#b0bf00]" />
-                <div className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-[#020e27]" style={{
+                <div className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-gray-950" style={{
                   boxShadow: '0 0 8px rgba(239, 68, 68, 0.6)'
                 }}></div>
                 <div className="absolute inset-0 bg-[#b0bf00] rounded-xl opacity-0 group-hover:opacity-1 transition-opacity duration-300"></div>
@@ -199,10 +204,10 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
                 boxShadow: '0 4px 16px rgba(176, 191, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
               }}>
                 <div className="text-right">
-                  <p className="text-sm font-bold text-[#020e27] leading-tight">{user?.name.split(' ')[0]} {user?.name.split(' ')[1]?.charAt(0)}.</p>
-                  <p className="text-xs text-[#020e27]/70 capitalize leading-tight font-medium">{user?.role.replace('_', ' ')}</p>
+                  <p className="text-sm font-bold text-white leading-tight">{user?.name.split(' ')[0]} {user?.name.split(' ')[1]?.charAt(0)}.</p>
+                  <p className="text-xs text-white/70 capitalize leading-tight font-medium">{user?.role.replace('_', ' ')}</p>
                 </div>
-                <div className="w-9 h-9 bg-[#020e27] rounded-lg flex items-center justify-center" style={{
+                <div className="w-9 h-9 bg-gray-950 rounded-lg flex items-center justify-center" style={{
                   boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
                 }}>
                   <span className="text-sm font-bold text-[#b0bf00]">
